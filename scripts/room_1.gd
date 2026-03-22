@@ -40,7 +40,11 @@ func dialog(on_what,target_what,text_what)-> void:
 		Manager.emit_signal("hide_arrows",self)
 		dialog_box.text.text = text_what
 		dialog_box.visible = true 
-		dialog_box.load_text()		
+		dialog_box.load_text()
+		if on_what == on_lock:
+			var password = load("res://scenes/password.tscn").instantiate()
+			password.add_to_group("room")
+			main.get_node("CanvasLayer").add_child.call_deferred(password)
 func _on_angry_teacher_mouse_entered() -> void:
 	on_teacher = true 
 func _on_angry_teacher_mouse_exited() -> void:
