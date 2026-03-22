@@ -1,7 +1,13 @@
 [gd_scene format=3 uid="uid://bfinkpelck3i1"]
 
+[ext_resource type="Script" uid="uid://c8xja21r37n72" path="res://scripts/room_1.gd" id="1_0tsjr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vu5en"]
+size = Vector2(130.5, 128)
+
 [node name="room1" type="Node2D" unique_id=1359342244]
 z_index = -1
+script = ExtResource("1_0tsjr")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=950923231]
 offset_left = -2.0
@@ -40,3 +46,15 @@ offset_right = 282.0
 offset_bottom = 389.0
 mouse_filter = 1
 color = Color(0.7500437, 0.83895856, 0.8394371, 1)
+
+[node name="angry_teacher" type="Area2D" parent="." unique_id=1620265853]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="angry_teacher" unique_id=643663935]
+position = Vector2(215.25, 323)
+shape = SubResource("RectangleShape2D_vu5en")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1973029227]
+position = Vector2(576, 324)
+
+[connection signal="mouse_entered" from="angry_teacher" to="." method="_on_angry_teacher_mouse_entered"]
+[connection signal="mouse_exited" from="angry_teacher" to="." method="_on_angry_teacher_mouse_exited"]

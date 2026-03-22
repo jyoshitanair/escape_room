@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dedpkfy5mi3wm"]
+
+[node name="dialog_box" type="Node2D" unique_id=588437428]
+
+[node name="Panel" type="Panel" parent="." unique_id=1149774971]
+offset_top = 511.0
+offset_right = 1156.0
+offset_bottom = 649.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel" unique_id=728341155]
+layout_mode = 0
+offset_right = 710.0
+offset_bottom = 282.0
