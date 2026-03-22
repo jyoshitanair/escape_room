@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c47e2lysv7f5y"]
+
+[ext_resource type="PackedScene" uid="uid://bp0bvyvf458xo" path="res://arrows.tscn" id="1_o5qli"]
+
+[node name="main" type="Node2D" unique_id=986428586]
+
+[node name="cur_room" type="Node2D" parent="." unique_id=487301778]
+
+[node name="arrows" parent="." unique_id=1415237275 instance=ExtResource("1_o5qli")]
+z_index = 1000
+position = Vector2(1, -1)

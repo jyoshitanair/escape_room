@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bp0bvyvf458xo"]
+
+[ext_resource type="Script" uid="uid://bbevaw3xvrunq" path="res://scripts/arrows.gd" id="1_70705"]
+
+[sub_resource type="Gradient" id="Gradient_0rlhl"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_70705"]
+gradient = SubResource("Gradient_0rlhl")
+
+[sub_resource type="Gradient" id="Gradient_wr3d2"]
+colors = PackedColorArray(0.7607843, 0, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_i52u5"]
+gradient = SubResource("Gradient_wr3d2")
+
+[node name="arrows" type="Node2D" unique_id=1415237275]
+script = ExtResource("1_70705")
+
+[node name="left" type="TextureButton" parent="." unique_id=465103096]
+offset_left = 2.0
+offset_top = 263.0
+offset_right = 66.0
+offset_bottom = 327.0
+texture_normal = SubResource("GradientTexture2D_70705")
+texture_pressed = SubResource("GradientTexture2D_i52u5")
+
+[node name="right" type="TextureButton" parent="." unique_id=1414982940]
+offset_left = 1090.0
+offset_top = 267.0
+offset_right = 1154.0
+offset_bottom = 331.0
+texture_normal = SubResource("GradientTexture2D_70705")
+texture_pressed = SubResource("GradientTexture2D_i52u5")
+
+[connection signal="pressed" from="left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="right" to="." method="_on_right_pressed"]
