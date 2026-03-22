@@ -1,13 +1,45 @@
 [gd_scene format=3 uid="uid://dedpkfy5mi3wm"]
 
-[node name="dialog_box" type="Node2D" unique_id=588437428]
+[ext_resource type="Script" uid="uid://b3hxgohpap7bb" path="res://scripts/dialog_box.gd" id="1_xvd2c"]
+
+[node name="dialog_box" type="Control" unique_id=1867905758]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xvd2c")
 
 [node name="Panel" type="Panel" parent="." unique_id=1149774971]
-offset_top = 511.0
-offset_right = 1156.0
-offset_bottom = 649.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -149.5
+offset_top = 17.0
+offset_right = 149.5
+offset_bottom = 70.0
+grow_horizontal = 2
+metadata/_edit_group_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel" unique_id=728341155]
-layout_mode = 0
-offset_right = 710.0
-offset_bottom = 282.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "hidsfhsdfhsdgs dfgdsgsdhsdhsdghsdhs hsdhsdhsdhsdhdsh"
+scroll_following = true
+scroll_following_visible_characters = true
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Timer" type="Timer" parent="." unique_id=1636945383]
+wait_time = 1.5
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

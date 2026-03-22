@@ -1,6 +1,9 @@
 extends Node2D
-var cur_room 
-
+var main
+func _ready() -> void: 
+	main = get_tree().current_scene
 func _on_back_pressed() -> void:
-	cur_room._return_to_main()
-	get_tree().current_scene._show_arrows()
+	Manager.cur_room._return_to_main()
+	main._show_arrows()
+	main.can_hide_arrows = true
+	

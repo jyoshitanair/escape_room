@@ -1,11 +1,27 @@
 [gd_scene format=3 uid="uid://dbpnoecqoh1ai"]
 
+[ext_resource type="Script" uid="uid://dga6hkhkww3tj" path="res://scripts/room_2.gd" id="1_586c8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0ydv"]
+size = Vector2(714, 173)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4et86"]
+size = Vector2(168, 183.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ktm03"]
+size = Vector2(326.5, 127.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lsxps"]
+size = Vector2(308.5, 195)
+
 [node name="room_2" type="Node2D" unique_id=27939105]
+script = ExtResource("1_586c8")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1645776215]
 offset_left = -2.0
 offset_right = 1149.0
 offset_bottom = 646.0
+mouse_filter = 1
 color = Color(0.21230483, 0.21230483, 0.21230483, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=1835636728]
@@ -13,18 +29,21 @@ offset_left = 9.0
 offset_top = 29.0
 offset_right = 371.0
 offset_bottom = 668.0
+mouse_filter = 1
 
 [node name="ColorRect3" type="ColorRect" parent="." unique_id=793711916]
 offset_left = 936.0
 offset_top = 66.0
 offset_right = 1092.0
 offset_bottom = 206.0
+mouse_filter = 1
 
 [node name="ColorRect4" type="ColorRect" parent="." unique_id=1880105139]
 offset_left = 23.0
 offset_top = 79.0
 offset_right = 346.0
 offset_bottom = 200.0
+mouse_filter = 1
 color = Color(0.22352941, 1, 1, 1)
 
 [node name="ColorRect5" type="ColorRect" parent="." unique_id=1558997440]
@@ -32,6 +51,7 @@ offset_left = 34.0
 offset_top = 436.0
 offset_right = 340.0
 offset_bottom = 637.0
+mouse_filter = 1
 color = Color(0.5542491, 0.3706353, 0.20266104, 1)
 
 [node name="ColorRect6" type="ColorRect" parent="." unique_id=987469439]
@@ -39,18 +59,21 @@ offset_left = 673.0
 offset_top = 62.0
 offset_right = 851.0
 offset_bottom = 208.0
+mouse_filter = 1
 
 [node name="ColorRect7" type="ColorRect" parent="." unique_id=1174209209]
 offset_left = 365.0
 offset_top = 479.0
 offset_right = 1156.0
 offset_bottom = 667.0
+mouse_filter = 1
 
 [node name="ColorRect8" type="ColorRect" parent="." unique_id=353237011]
 offset_left = 364.0
 offset_top = 449.0
 offset_right = 1159.0
 offset_bottom = 502.0
+mouse_filter = 1
 color = Color(0.28126884, 0.19297129, 0.14813164, 1)
 
 [node name="ColorRect9" type="ColorRect" parent="." unique_id=414648808]
@@ -58,9 +81,47 @@ offset_left = 702.0
 offset_top = 303.0
 offset_right = 858.0
 offset_bottom = 473.0
+mouse_filter = 1
 
 [node name="ColorRect10" type="ColorRect" parent="." unique_id=586859079]
 offset_left = 420.0
 offset_top = 57.0
 offset_right = 564.0
 offset_bottom = 206.0
+mouse_filter = 1
+
+[node name="clocks" type="Area2D" parent="." unique_id=552854628]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="clocks" unique_id=287127062]
+position = Vector2(761, 129.5)
+shape = SubResource("RectangleShape2D_w0ydv")
+
+[node name="globe" type="Area2D" parent="." unique_id=2063643593]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="globe" unique_id=1539505286]
+position = Vector2(780, 389.25)
+shape = SubResource("RectangleShape2D_4et86")
+
+[node name="books" type="Area2D" parent="." unique_id=1661459333]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="books" unique_id=1811044376]
+position = Vector2(182.75, 137.25)
+shape = SubResource("RectangleShape2D_ktm03")
+
+[node name="locked" type="Area2D" parent="." unique_id=549705140]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="locked" unique_id=358553119]
+position = Vector2(186.75, 536.5)
+shape = SubResource("RectangleShape2D_lsxps")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1422172095]
+position = Vector2(576, 324)
+
+[connection signal="mouse_entered" from="clocks" to="." method="_on_clocks_mouse_entered"]
+[connection signal="mouse_exited" from="clocks" to="." method="_on_clocks_mouse_exited"]
+[connection signal="mouse_entered" from="globe" to="." method="_on_globe_mouse_entered"]
+[connection signal="mouse_exited" from="globe" to="." method="_on_globe_mouse_exited"]
+[connection signal="mouse_entered" from="books" to="." method="_on_books_mouse_entered"]
+[connection signal="mouse_exited" from="books" to="." method="_on_books_mouse_exited"]
+[connection signal="mouse_entered" from="locked" to="." method="_on_locked_mouse_entered"]
+[connection signal="mouse_exited" from="locked" to="." method="_on_locked_mouse_exited"]

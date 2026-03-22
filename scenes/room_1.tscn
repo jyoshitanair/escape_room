@@ -5,9 +5,21 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vu5en"]
 size = Vector2(130.5, 128)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tsjr"]
+size = Vector2(632.5, 359)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8oql1"]
+size = Vector2(292, 178.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xhekj"]
+size = Vector2(91, 79.5)
+
 [node name="room1" type="Node2D" unique_id=1359342244]
 z_index = -1
 script = ExtResource("1_0tsjr")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1973029227]
+position = Vector2(576, 324)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=950923231]
 offset_left = -2.0
@@ -16,10 +28,10 @@ offset_bottom = 646.0
 mouse_filter = 1
 
 [node name="ColorRect5" type="ColorRect" parent="." unique_id=121391158]
-offset_left = 74.0
-offset_top = 111.0
-offset_right = 366.0
-offset_bottom = 290.0
+offset_left = 75.0
+offset_top = 44.0
+offset_right = 367.0
+offset_bottom = 223.0
 mouse_filter = 1
 color = Color(1, 0.11764706, 0.050980393, 1)
 
@@ -53,8 +65,29 @@ color = Color(0.7500437, 0.83895856, 0.8394371, 1)
 position = Vector2(215.25, 323)
 shape = SubResource("RectangleShape2D_vu5en")
 
-[node name="Marker2D" type="Marker2D" parent="." unique_id=1973029227]
-position = Vector2(576, 324)
+[node name="white_board" type="Area2D" parent="." unique_id=1572591050]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="white_board" unique_id=353927890]
+position = Vector2(778.75, 224.5)
+shape = SubResource("RectangleShape2D_0tsjr")
+
+[node name="test_board" type="Area2D" parent="." unique_id=450349755]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test_board" unique_id=754360573]
+position = Vector2(221, 133.75)
+shape = SubResource("RectangleShape2D_8oql1")
+
+[node name="lock" type="Area2D" parent="." unique_id=1177458349]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lock" unique_id=1740279045]
+position = Vector2(137, 546)
+shape = SubResource("RectangleShape2D_xhekj")
 
 [connection signal="mouse_entered" from="angry_teacher" to="." method="_on_angry_teacher_mouse_entered"]
 [connection signal="mouse_exited" from="angry_teacher" to="." method="_on_angry_teacher_mouse_exited"]
+[connection signal="mouse_entered" from="white_board" to="." method="_on_white_board_mouse_entered"]
+[connection signal="mouse_exited" from="white_board" to="." method="_on_white_board_mouse_exited"]
+[connection signal="mouse_entered" from="test_board" to="." method="_on_test_board_mouse_entered"]
+[connection signal="mouse_exited" from="test_board" to="." method="_on_test_board_mouse_exited"]
+[connection signal="mouse_entered" from="lock" to="." method="_on_lock_mouse_entered"]
+[connection signal="mouse_exited" from="lock" to="." method="_on_lock_mouse_exited"]

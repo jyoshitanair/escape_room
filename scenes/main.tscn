@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c47e2lysv7f5y"]
 
 [ext_resource type="Script" uid="uid://dstikshx3tyw" path="res://scripts/main.gd" id="1_0wfyh"]
+[ext_resource type="Script" uid="uid://7vt4kxthelvy" path="res://scripts/temp_room.gd" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://dedpkfy5mi3wm" path="res://scenes/dialog_box.tscn" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://d21ahaxpoi7t0" path="res://scenes/back_arrow.tscn" id="3_sugp2"]
 
 [sub_resource type="Gradient" id="Gradient_sugp2"]
@@ -19,14 +21,15 @@ script = ExtResource("1_0wfyh")
 
 [node name="Node" type="Node" parent="." unique_id=213927604]
 
-[node name="cur_room" type="Node2D" parent="Node" unique_id=487301778]
-
 [node name="camera" type="Camera2D" parent="Node" unique_id=1121434227]
 position = Vector2(574, 322)
 limit_left = 0
 limit_top = 5
 limit_right = 1152
 limit_bottom = 653
+
+[node name="temp_room" type="Node2D" parent="Node" unique_id=952192776 groups=["room"]]
+script = ExtResource("2_jyhfs")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1895423010]
 
@@ -39,3 +42,6 @@ offset_right = 66.0
 offset_bottom = 327.0
 texture_normal = SubResource("GradientTexture2D_jyhfs")
 texture_pressed = SubResource("GradientTexture2D_tefeu")
+
+[node name="dialog_box" parent="CanvasLayer" unique_id=588437428 instance=ExtResource("3_jyhfs")]
+visible = false
