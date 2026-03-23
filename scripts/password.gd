@@ -2,13 +2,13 @@ extends ColorRect
 var clickable = false
 var solved = false
 @export var label:Label
-var cur_value = 0
+var cur_value = 1
 
 func _input(event):
 	if event.is_action_pressed("click") and clickable:
-		if cur_value != 9:
+		if cur_value != 10:
 			cur_value += 1
-		else:
+		if cur_value == 10:
 			cur_value = 0
 		if label.is_in_group("label1"):
 			Manager.label1_value = cur_value

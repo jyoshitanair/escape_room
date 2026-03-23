@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dlqh5flvqg6lj"]
+
+[node name="you win" type="Node2D" unique_id=2085988303]
+
+[node name="Panel" type="Panel" parent="." unique_id=866011651]
+offset_right = 1227.0
+offset_bottom = 733.0
+
+[node name="Label" type="Label" parent="." unique_id=588692558]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 97.0
+offset_top = 202.0
+offset_right = 1299.5
+offset_bottom = 895.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 150
+text = "You escaped!
+"

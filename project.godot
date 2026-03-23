@@ -18,6 +18,10 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 
 Manager="*uid://dbyhyt3c7s3i4"
 
+[dotnet]
+
+project/assembly_name="5hr game"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")

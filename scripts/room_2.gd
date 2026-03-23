@@ -50,7 +50,7 @@ func dialog(on_what,target_what,text_what)-> void:
 		if on_what == on_locked and !Manager.key2_visible and !password_loaded:
 			password = load("res://scenes/password.tscn").instantiate()
 			password.add_to_group("room")
-			password.position = Vector2(600,412)
+			password.position = Vector2(770,412)
 			main.get_node("CanvasLayer").add_child.call_deferred(password)	
 			password_loaded = true 
 func _on_clocks_mouse_entered() -> void:
@@ -82,8 +82,8 @@ func on_show_key() -> void:
 	Manager.key2_visible = true
 	var new_key = key.instantiate()
 	new_key.add_to_group("key_room_2")
-	new_key.get_node("ColorRect").position = Vector2(31,435)
-	new_key.get_node("ColorRect").size = Vector2(313,201)
+	new_key.get_node("ColorRect").position = Vector2(20,435)
+	new_key.get_node("ColorRect").size = Vector2(400,220)
 	Manager.key_count += 1 
 	main.get_node("Node").add_child.call_deferred(new_key)
 	dialog(true,locked,"It opened. You found a key")

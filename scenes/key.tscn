@@ -1,11 +1,56 @@
 [gd_scene format=3 uid="uid://ld0un8v2rouf"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ndie3"]
+bg_color = Color(0.8235294, 0.7411765, 0.19215687, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
 [node name="key" type="Node2D" unique_id=1114968442]
+position = Vector2(18, -34)
+metadata/_edit_group_ = true
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1720317916]
-offset_left = 88.0
-offset_top = 506.0
-offset_right = 187.0
-offset_bottom = 587.0
+offset_left = 72.0
+offset_top = 498.0
+offset_right = 198.0
+offset_bottom = 596.0
 mouse_filter = 1
-color = Color(0.4320199, 0.057789728, 0.32371476, 1)
+color = Color(0.22251385, 0.044893637, 0.013194059, 1)
+
+[node name="Panel" type="Panel" parent="ColorRect" unique_id=1708179743]
+z_index = 100
+layout_mode = 0
+offset_left = 46.0
+offset_top = 20.0
+offset_right = 78.0
+offset_bottom = 51.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ndie3")
+
+[node name="Panel2" type="Panel" parent="ColorRect" unique_id=287125857]
+z_index = 100
+layout_mode = 0
+offset_left = 56.0
+offset_top = 24.0
+offset_right = 65.0
+offset_bottom = 79.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ndie3")
+
+[node name="Panel3" type="Panel" parent="ColorRect" unique_id=1140340748]
+z_index = 100
+layout_mode = 0
+offset_left = 59.0
+offset_top = 54.0
+offset_right = 77.0
+offset_bottom = 62.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ndie3")
+
+[node name="Panel4" type="Panel" parent="ColorRect" unique_id=773975480]
+z_index = 100
+layout_mode = 0
+offset_left = 59.0
+offset_top = 66.0
+offset_right = 77.0
+offset_bottom = 74.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ndie3")

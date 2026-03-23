@@ -30,7 +30,10 @@ func _process(delta: float) -> void:
 	camera.position = camera.position.lerp(target.position,delta*3)
 func _input(event):
 	if event.is_action_pressed("click"):
-		dialog(on_window,window,"It's locked. Seems like you need 3 keys.")
+		if Manager.key_count != 3:
+			dialog(on_window,window,"It's locked. Seems like you need 3 keys.")
+		if Manager.key_count == 3 and on_window and can_click:
+			get_tree().change_scene_to_file("res://scripts/you_win.tscn")
 		dialog(on_chart,chart,"Some kind of code?")
 		if Manager.key3_visible and on_locked:
 			dialog(on_locked,locked,"You already found a key")

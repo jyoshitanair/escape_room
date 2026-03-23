@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://bfinkpelck3i1"]
 
 [ext_resource type="Script" uid="uid://c8xja21r37n72" path="res://scripts/room_1.gd" id="1_0tsjr"]
+[ext_resource type="Texture2D" uid="uid://f7kvn2p1ci2q" path="res://assets/Drawing-2.sketchpad.png" id="2_xhekj"]
+[ext_resource type="Texture2D" uid="uid://1l186ymkdeme" path="res://assets/1df62fbd-cd17-4864-98d2-c8a54cce3ece.sketchpad.png" id="3_irjyx"]
+[ext_resource type="Texture2D" uid="uid://c3l2syuek1j3f" path="res://assets/Drawing-1.sketchpad.png" id="4_0akh5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vu5en"]
-size = Vector2(130.5, 128)
+size = Vector2(130.5, 113)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0tsjr"]
 size = Vector2(582.5, 316)
@@ -12,57 +15,30 @@ size = Vector2(582.5, 316)
 size = Vector2(292, 178.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xhekj"]
-size = Vector2(91, 79.5)
+size = Vector2(102.5, 79.5)
 
 [node name="room1" type="Node2D" unique_id=1359342244]
 z_index = -1
 script = ExtResource("1_0tsjr")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1336054968]
+offset_right = 1167.0
+offset_bottom = 663.0
+mouse_filter = 1
+color = Color(0.2784284, 0.15120655, 0.052013807, 1)
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=574622082]
+position = Vector2(201, 470.99997)
+scale = Vector2(0.2415768, 0.23420124)
+texture = ExtResource("2_xhekj")
+
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1973029227]
 position = Vector2(576, 324)
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=950923231]
-offset_left = -2.0
-offset_right = 1149.0
-offset_bottom = 646.0
-mouse_filter = 1
-
-[node name="ColorRect5" type="ColorRect" parent="." unique_id=121391158]
-offset_left = 75.0
-offset_top = 44.0
-offset_right = 367.0
-offset_bottom = 223.0
-mouse_filter = 1
-color = Color(1, 0.11764706, 0.050980393, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=1829923959]
-offset_left = 463.0
-offset_top = 26.0
-offset_right = 1046.0
-offset_bottom = 341.0
-mouse_filter = 1
-color = Color(0.32915837, 0.3291584, 0.3291584, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="." unique_id=1604747356]
-offset_left = 54.0
-offset_top = 389.0
-offset_right = 395.0
-offset_bottom = 678.0
-mouse_filter = 1
-color = Color(0.19076231, 0.19076234, 0.19076231, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="." unique_id=1407544334]
-offset_left = 150.0
-offset_top = 258.0
-offset_right = 282.0
-offset_bottom = 389.0
-mouse_filter = 1
-color = Color(0.7500437, 0.83895856, 0.8394371, 1)
 
 [node name="angry_teacher" type="Area2D" parent="." unique_id=1620265853]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="angry_teacher" unique_id=643663935]
-position = Vector2(215.25, 323)
+position = Vector2(204, 340.5)
 shape = SubResource("RectangleShape2D_vu5en")
 
 [node name="white_board" type="Area2D" parent="." unique_id=1572591050]
@@ -80,8 +56,18 @@ shape = SubResource("RectangleShape2D_8oql1")
 [node name="lock" type="Area2D" parent="." unique_id=1177458349]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lock" unique_id=1740279045]
-position = Vector2(137, 546)
+position = Vector2(157.75, 522)
 shape = SubResource("RectangleShape2D_xhekj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=761224399]
+position = Vector2(236, 152)
+scale = Vector2(0.17629927, 0.21818864)
+texture = ExtResource("3_irjyx")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=293770967]
+position = Vector2(748, 199.99998)
+scale = Vector2(0.30017915, 0.30688623)
+texture = ExtResource("4_0akh5")
 
 [connection signal="mouse_entered" from="angry_teacher" to="." method="_on_angry_teacher_mouse_entered"]
 [connection signal="mouse_exited" from="angry_teacher" to="." method="_on_angry_teacher_mouse_exited"]

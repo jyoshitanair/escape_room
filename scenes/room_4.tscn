@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://c1r71f4pu3hk"]
 
 [ext_resource type="Script" uid="uid://d4jca8qd1yyaw" path="res://scripts/room_4.gd" id="1_f3snk"]
+[ext_resource type="Texture2D" uid="uid://bm3lqvl1ow5k" path="res://assets/Drawing-6.sketchpad (2).png" id="2_ccapj"]
+[ext_resource type="Texture2D" uid="uid://csy51l2lty2ix" path="res://assets/Drawing-6.sketchpad.png" id="3_5d4n5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dbpl5"]
-size = Vector2(232, 233.5)
+size = Vector2(304, 233.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ccapj"]
 size = Vector2(528.5, 243)
@@ -19,32 +21,10 @@ offset_bottom = 674.0
 mouse_filter = 1
 color = Color(0.2870733, 0.14851302, 0.093219765, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=722416858]
-offset_left = 119.0
-offset_top = 367.0
-offset_right = 455.0
-offset_bottom = 538.0
-mouse_filter = 1
-
-[node name="ColorRect4" type="ColorRect" parent="." unique_id=1813999641]
-offset_left = 644.0
-offset_top = 373.0
-offset_right = 1117.0
-offset_bottom = 559.0
-mouse_filter = 1
-
-[node name="ColorRect5" type="ColorRect" parent="." unique_id=1623818430]
-offset_left = 206.0
-offset_top = 175.0
-offset_right = 363.0
-offset_bottom = 365.0
-mouse_filter = 1
-color = Color(0.13333334, 0.77254903, 0.77254903, 1)
-
 [node name="Jett" type="Area2D" parent="." unique_id=1745370165]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jett" unique_id=804219662]
-position = Vector2(284, 266.25)
+position = Vector2(248, 266.25)
 shape = SubResource("RectangleShape2D_dbpl5")
 
 [node name="desks" type="Area2D" parent="." unique_id=1244050910]
@@ -55,6 +35,21 @@ shape = SubResource("RectangleShape2D_ccapj")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1458033150]
 position = Vector2(576, 324)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1120824423]
+position = Vector2(333.5, 362.87506)
+scale = Vector2(0.2717879, 0.28020725)
+texture = ExtResource("2_ccapj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=440791879]
+position = Vector2(803.99994, 379)
+scale = Vector2(0.2579739, 0.3512386)
+texture = ExtResource("3_5d4n5")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=864832622]
+position = Vector2(1191, 368)
+scale = Vector2(0.2579739, 0.3512386)
+texture = ExtResource("3_5d4n5")
 
 [connection signal="mouse_entered" from="Jett" to="." method="_on_jett_mouse_entered"]
 [connection signal="mouse_exited" from="Jett" to="." method="_on_jett_mouse_exited"]
