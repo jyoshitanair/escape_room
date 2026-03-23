@@ -22,6 +22,30 @@ func change_page(room_number:int) -> void:
 	cur_room = load(path).instantiate()
 	cur_room.add_to_group("room")
 	main.get_node("Node").add_child.call_deferred(cur_room)
+	var key_1 = get_tree().get_first_node_in_group("key_room_1")
+	var key_2 =get_tree().get_first_node_in_group("key_room_2")
+	var key_3 =get_tree().get_first_node_in_group("key_room_3")
+	if room_number == 1:
+		if key_1:
+			key_1.visible = true
+		if key_2:
+			key_2.visible = false
+		if key_3:
+			key_3.visible = false
+	if room_number == 2:
+		if key_2:
+			key_2.visible = true
+		if key_1:
+			key_1.visible = false
+		if key_3:
+			key_3.visible = false
+	if room_number == 3:
+		if key_2:
+			key_2.visible = false
+		if key_1:
+			key_1.visible = false
+		if key_3:
+			key_3.visible = true
 	#main.call_deferred("move_child",cur_room,0)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

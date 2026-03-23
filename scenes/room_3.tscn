@@ -1,21 +1,79 @@
 [gd_scene format=3 uid="uid://b3xhot5hwmb0m"]
 
+[ext_resource type="Script" uid="uid://j4fketuuuwn6" path="res://scripts/room_3.gd" id="1_1nud3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmnxm"]
+size = Vector2(410, 330.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjoje"]
+size = Vector2(428.375, 184.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bg4i0"]
+size = Vector2(219, 134)
+
 [node name="room_three" type="Node2D" unique_id=329186651]
+script = ExtResource("1_1nud3")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=348567343]
+z_index = -20
 offset_left = -2.0
 offset_right = 1149.0
 offset_bottom = 646.0
+mouse_filter = 1
 color = Color(0.4701932, 0.24941543, 0.39711472, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=1546306417]
-offset_left = 85.0
-offset_top = 70.0
-offset_right = 491.0
-offset_bottom = 447.0
+offset_left = 88.0
+offset_top = 25.0
+offset_right = 494.0
+offset_bottom = 355.0
+mouse_filter = 1
 
 [node name="ColorRect3" type="ColorRect" parent="." unique_id=881370240]
-offset_left = 789.0
-offset_top = 262.0
-offset_right = 1150.0
-offset_bottom = 647.0
+offset_left = 645.0
+offset_top = 361.0
+offset_right = 1071.0
+offset_bottom = 544.0
+mouse_filter = 1
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=467806079]
+z_index = -17
+offset_left = 735.0
+offset_top = 36.0
+offset_right = 953.0
+offset_bottom = 170.0
+mouse_filter = 1
+
+[node name="window" type="Area2D" parent="." unique_id=1758538691]
+position = Vector2(0, -2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="window" unique_id=686349092]
+position = Vector2(293, 190.25)
+shape = SubResource("RectangleShape2D_pmnxm")
+
+[node name="chart" type="Area2D" parent="." unique_id=1476109794]
+position = Vector2(-45, 51)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chart" unique_id=742111953]
+position = Vector2(903.8125, 400.625)
+shape = SubResource("RectangleShape2D_rjoje")
+
+[node name="locked" type="Area2D" parent="." unique_id=1119743943]
+position = Vector2(-158, -20)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="locked" unique_id=959190032]
+z_index = -14
+position = Vector2(1002.5, 123)
+shape = SubResource("RectangleShape2D_bg4i0")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1529474336]
+position = Vector2(576, 324)
+
+[connection signal="mouse_entered" from="window" to="." method="_on_window_mouse_entered"]
+[connection signal="mouse_exited" from="window" to="." method="_on_window_mouse_exited"]
+[connection signal="mouse_entered" from="chart" to="." method="_on_chart_mouse_entered"]
+[connection signal="mouse_exited" from="chart" to="." method="_on_chart_mouse_exited"]
+[connection signal="mouse_entered" from="locked" to="." method="_on_locked_mouse_entered"]
+[connection signal="mouse_exited" from="locked" to="." method="_on_locked_mouse_exited"]

@@ -6,7 +6,7 @@ func _on_back_pressed() -> void:
 	Manager.cur_room._return_to_main()
 	main._show_arrows()
 	main.can_hide_arrows = true
-	var password = get_tree().current_scene.get_node("CanvasLayer/password")
+	var password = get_tree().current_scene.get_node_or_null("CanvasLayer/password")
 	if password:
 		password.queue_free()
 	

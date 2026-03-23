@@ -18,6 +18,7 @@ size = Vector2(308.5, 195)
 script = ExtResource("1_586c8")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1645776215]
+z_index = -4096
 offset_left = -2.0
 offset_right = 1149.0
 offset_bottom = 646.0
@@ -25,6 +26,7 @@ mouse_filter = 1
 color = Color(0.21230483, 0.21230483, 0.21230483, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=1835636728]
+z_index = -1000
 offset_left = 9.0
 offset_top = 29.0
 offset_right = 371.0
@@ -47,6 +49,7 @@ mouse_filter = 1
 color = Color(0.22352941, 1, 1, 1)
 
 [node name="ColorRect5" type="ColorRect" parent="." unique_id=1558997440]
+z_index = -100
 offset_left = 34.0
 offset_top = 436.0
 offset_right = 340.0
@@ -77,10 +80,10 @@ mouse_filter = 1
 color = Color(0.28126884, 0.19297129, 0.14813164, 1)
 
 [node name="ColorRect9" type="ColorRect" parent="." unique_id=414648808]
-offset_left = 702.0
-offset_top = 303.0
-offset_right = 858.0
-offset_bottom = 473.0
+offset_left = 871.0
+offset_top = 292.0
+offset_right = 1035.0
+offset_bottom = 472.0
 mouse_filter = 1
 
 [node name="ColorRect10" type="ColorRect" parent="." unique_id=586859079]
@@ -99,7 +102,7 @@ shape = SubResource("RectangleShape2D_w0ydv")
 [node name="globe" type="Area2D" parent="." unique_id=2063643593]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="globe" unique_id=1539505286]
-position = Vector2(780, 389.25)
+position = Vector2(953, 379)
 shape = SubResource("RectangleShape2D_4et86")
 
 [node name="books" type="Area2D" parent="." unique_id=1661459333]

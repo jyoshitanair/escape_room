@@ -6,7 +6,7 @@
 size = Vector2(130.5, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0tsjr"]
-size = Vector2(632.5, 359)
+size = Vector2(582.5, 316)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8oql1"]
 size = Vector2(292, 178.5)
@@ -37,9 +37,9 @@ color = Color(1, 0.11764706, 0.050980393, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=1829923959]
 offset_left = 463.0
-offset_top = 44.0
-offset_right = 1096.0
-offset_bottom = 403.0
+offset_top = 26.0
+offset_right = 1046.0
+offset_bottom = 341.0
 mouse_filter = 1
 color = Color(0.32915837, 0.3291584, 0.3291584, 1)
 
@@ -68,7 +68,7 @@ shape = SubResource("RectangleShape2D_vu5en")
 [node name="white_board" type="Area2D" parent="." unique_id=1572591050]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="white_board" unique_id=353927890]
-position = Vector2(778.75, 224.5)
+position = Vector2(753.75, 183)
 shape = SubResource("RectangleShape2D_0tsjr")
 
 [node name="test_board" type="Area2D" parent="." unique_id=450349755]

@@ -1,34 +1,62 @@
 [gd_scene format=3 uid="uid://c1r71f4pu3hk"]
 
+[ext_resource type="Script" uid="uid://d4jca8qd1yyaw" path="res://scripts/room_4.gd" id="1_f3snk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dbpl5"]
+size = Vector2(232, 233.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ccapj"]
+size = Vector2(528.5, 243)
+
 [node name="room_4" type="Node2D" unique_id=936025624]
+script = ExtResource("1_f3snk")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1508421478]
-offset_left = -2.0
-offset_right = 1149.0
-offset_bottom = 646.0
+offset_left = -26.0
+offset_top = -36.0
+offset_right = 1201.0
+offset_bottom = 674.0
+mouse_filter = 1
 color = Color(0.2870733, 0.14851302, 0.093219765, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=722416858]
-offset_left = 31.0
-offset_top = 355.0
-offset_right = 367.0
-offset_bottom = 549.0
-
-[node name="ColorRect3" type="ColorRect" parent="." unique_id=2133425623]
-offset_left = 446.0
-offset_top = 360.0
-offset_right = 776.0
-offset_bottom = 548.0
+offset_left = 119.0
+offset_top = 367.0
+offset_right = 455.0
+offset_bottom = 538.0
+mouse_filter = 1
 
 [node name="ColorRect4" type="ColorRect" parent="." unique_id=1813999641]
-offset_left = 861.0
-offset_top = 361.0
-offset_right = 1185.0
-offset_bottom = 547.0
+offset_left = 644.0
+offset_top = 373.0
+offset_right = 1117.0
+offset_bottom = 559.0
+mouse_filter = 1
 
 [node name="ColorRect5" type="ColorRect" parent="." unique_id=1623818430]
-offset_left = 113.0
-offset_top = 164.0
-offset_right = 270.0
-offset_bottom = 354.0
+offset_left = 206.0
+offset_top = 175.0
+offset_right = 363.0
+offset_bottom = 365.0
+mouse_filter = 1
 color = Color(0.13333334, 0.77254903, 0.77254903, 1)
+
+[node name="Jett" type="Area2D" parent="." unique_id=1745370165]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jett" unique_id=804219662]
+position = Vector2(284, 266.25)
+shape = SubResource("RectangleShape2D_dbpl5")
+
+[node name="desks" type="Area2D" parent="." unique_id=1244050910]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="desks" unique_id=1848343268]
+position = Vector2(884.75, 467)
+shape = SubResource("RectangleShape2D_ccapj")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1458033150]
+position = Vector2(576, 324)
+
+[connection signal="mouse_entered" from="Jett" to="." method="_on_jett_mouse_entered"]
+[connection signal="mouse_exited" from="Jett" to="." method="_on_jett_mouse_exited"]
+[connection signal="mouse_entered" from="desks" to="." method="_on_desks_mouse_entered"]
+[connection signal="mouse_exited" from="desks" to="." method="_on_desks_mouse_exited"]
